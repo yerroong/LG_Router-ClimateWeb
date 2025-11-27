@@ -1,0 +1,60 @@
+.cw-header {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.cw-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.cw-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d5f80;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cw-logo span {
+  color: #4ca1af;
+  margin-left: 4px;
+}
+
+.cw-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.cw-nav-item {
+  color: #555;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 0;
+  position: relative;
+}
+
+.cw-nav-item.active {
+  color: #2d5f80;
+  font-weight: 600;
+}
+
+.cw-nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #2d5f80;
+}

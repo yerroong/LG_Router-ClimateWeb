@@ -1,0 +1,14 @@
+.header {
+  background: #376fa3;
+  padding: 16px;
+  text-align: center;
+}
+.header a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header a.active {
+  text-decoration: underline;
+}

@@ -1,0 +1,31 @@
+.region-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.2s;
+}
+
+.region-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.region-img {
+  width: auto;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.region-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.region-summary {
+  font-size: 16px;
+  color: #555;
+}
