@@ -1,4 +1,4 @@
-# 🌍 2025 Climate Watch 웹페이지
+# 🌍 2025 Climate Watch 웹
 
 ---
 
