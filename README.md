@@ -1,4 +1,4 @@
-<img width="193" height="804" alt="image" src="https://github.com/user-attachments/assets/4ab882f4-fee3-4d94-8a90-27833bdf306b" /># 🌍 2025 Climate Watch 웹페이지
+# 🌍 2025 Climate Watch 웹페이지
 
 ---
 
