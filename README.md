@@ -1,7 +1,5 @@
 # 🌍 2025 Climate Watch 웹
 
----
-
 ## 📌 프로젝트 개요
 
 **주제 선정 배경**
@@ -27,8 +25,6 @@ Perplexity AI를 활용하여 현재 가장 이슈로 되는 키워드를 추천
 * 상세 페이지 📄
 * 지역별/인사이트 페이지 🌐
 
----
-
 ## 🛠 기술 스택
 
 * **Frontend:** React, Router, Vite
@@ -36,8 +32,6 @@ Perplexity AI를 활용하여 현재 가장 이슈로 되는 키워드를 추천
 * **데이터:**
   * data/ 폴더 내 더미 데이터 (대부분 페이지)
   * InsightsPage만 OpenWeatherMap API 연동
-
----
 
 ## 📂 폴더 구조
 
@@ -98,7 +92,6 @@ src/
 
   * 디폴트 페이지로 Header, Footer, Outlet 등 전역 레이아웃 관리
 
----
 
 ## ✨ 주요 기능
 
@@ -109,8 +102,6 @@ src/
 * **코드**
 <img width="601" height="720" alt="image" src="https://github.com/user-attachments/assets/ff3a7c26-db13-46f6-9aaf-4bf5771c4b12" />
 
-
----
 
 ### 2️⃣ 주요 기후 이슈 카드
 
@@ -126,7 +117,6 @@ src/
 **시 이미지**
 <img width="1674" height="899" alt="image" src="https://github.com/user-attachments/assets/3a1c404d-bde2-4146-81e5-1413f6a511e7" />
 
----
 
 ### 3️⃣ 상세 페이지
 
@@ -137,8 +127,6 @@ src/
 <img width="1656" height="858" alt="image" src="https://github.com/user-attachments/assets/6513cad7-7ea0-4cf5-b7fe-3fafcaf7dd4c" />
 
 
----
-
 ### 4️⃣ Regions 페이지 🌎
 
 * 지역별 이상기후 카드 표시
@@ -148,12 +136,6 @@ src/
 **시연 이미지**
 <img width="1631" height="944" alt="image" src="https://github.com/user-attachments/assets/09957508-faff-4803-84bb-5cabacd5ac64" />
 
-
----
-
-좋아요! 😊 5️⃣ Insights 페이지 이후 내용만 **Markdown 형식**으로 다시 정리해 드릴게요. 바로 복붙 가능하게 만들었습니다.
-
----
 
 ### 5️⃣ Insights 페이지 📊
 
@@ -172,9 +154,6 @@ src/
   1. 국가별 실시간 기후 데이터 표시
   2. 카드 클릭 시 OpenWeatherMap 상세 페이지로 이동
   3. 로딩/에러 처리로 안정적 UX 제공
-
-
----
 
 ### 6️⃣ Footer
 
