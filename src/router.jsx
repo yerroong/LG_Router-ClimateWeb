@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import HomePage from "./pages/Homepage/Homepage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import RegionPage from "./pages/RegionsPage/RegionsPage";
-import InsightPage from "./pages/InsightsPage/InsightsPage";
+import InsightsPage from "./pages/InsightsPage/InsightsPage"
 import AboutPage from "./pages/AboutPage/AboutPage";
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       { path: "", element: <HomePage /> },
       { path: "climate/:climateId", element: <DetailPage /> },
       { path: "regions", element: <RegionPage /> },
-      { path: "insights", element: <InsightPage /> },
+      { path: "insights", element: <InsightsPage /> },
       { path: "about", element: <AboutPage /> },
     ],
   },
