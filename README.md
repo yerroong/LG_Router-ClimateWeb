@@ -1,4 +1,4 @@
-# 🌍 2025 Climate Watch 웹페이지
+<img width="193" height="804" alt="image" src="https://github.com/user-attachments/assets/4ab882f4-fee3-4d94-8a90-27833bdf306b" /># 🌍 2025 Climate Watch 웹페이지
 
 ---
 
@@ -7,15 +7,15 @@
 **주제 선정 배경**
 LG U+ 유레카에서 11월 25일~27일에 진행한 개인 웹페이지 제작 실습입니다.
 Perplexity AI를 활용하여 현재 가장 이슈로 되는 키워드를 추천받았고, 그 중 전 세계적으로 이상기후 현상이 증가하고 있다는 사회적 이슈를 확인했습니다.
-이에 대한 심각성과 현재 제작 가능한 기간과 내용을 고려해 **기후 위기 현황 시각화**를 주제로 선정했습니다.
+이에 대한 심각성과 제작 기간을 고려해 **기후 위기 현황 시각화**를 주제로 선정했습니다.
 
 * 기존 목표:
-
   * 지역별 지도에서 이상기후 확인
   * 실시간 기후 통계/데이터 제공
+    
 * 현실적 제약:
-
-  * AI를 활용하지 않고 제작하려고 최대한 노력했으며, 시간 관계상 실시간 데이터 대신 **더미 데이터** 사용
+  * AI를 활용하지 않고 제작하려고 최대한 노력했으며, 시간 관계상 대부분 페이지는 ** 더미 데이터** 사용
+  * Insights 페이지만 실시간 API 연동
   * 폴더 구조 및 기능 중심으로 시연
 
 **웹페이지 설명**
@@ -33,7 +33,9 @@ Perplexity AI를 활용하여 현재 가장 이슈로 되는 키워드를 추천
 
 * **Frontend:** React, Router, Vite
 * **CSS:** 일반 CSS, 컴포넌트별 폴더 관리
-* **이미지/데이터:** `public/img` 폴더, `data` 폴더 내 더미 데이터
+* **데이터:**
+  * data/ 폴더 내 더미 데이터 (대부분 페이지)
+  * InsightsPage만 OpenWeatherMap API 연동
 
 ---
 
@@ -43,6 +45,9 @@ Perplexity AI를 활용하여 현재 가장 이슈로 되는 키워드를 추천
 src/
 │
 ├─ components/
+│   ├─ InsightCard/ 
+│   │   ├─ InsightCard.jsx
+│   │   └─ InsightCard.css
 │   ├─ ClimateCard/
 │   │   ├─ ClimateCard.jsx
 │   │   └─ ClimateCard.css
@@ -57,54 +62,41 @@ src/
 │       └─ Footer.css
 │
 ├─ pages/
-│   ├─ Homepage/
-│   │   ├─ Homepage.jsx
-│   │   └─ Homepage.css
-│   ├─ DetailPage/
-│   │   ├─ DetailPage.jsx
-│   │   └─ DetailPage.css
-│   ├─ RegionsPage/
-│   │   ├─ RegionsPage.jsx
-│   │   └─ RegionsPage.css
-│   ├─ InsightsPage/
-│   │   ├─ InsightsPage.jsx
-│   │   └─ InsightsPage.css
+│   ├─ Homepage/          // 더미 데이터
+│   ├─ DetailPage/        // 더미 데이터
+│   ├─ RegionsPage/       // 더미 데이터
+│   ├─ InsightsPage/      // API 연동
 │   ├─ AboutPage/
-│   │   ├─ AboutPage.jsx
-│   │   └─ AboutPage.css
 │   └─ NotFound/
-│       ├─ NotFound.jsx
-│       └─ NotFound.css
 │
 ├─ layout/
 │   └─ DefaultLayout/
-│       ├─ DefaultLayout.jsx
-│       └─ DefaultLayout.css
-│
 ├─ data/
 │   ├─ climateData.js
+│   ├─ insightData.js 
 │   └─ bannerData.js
-│
 ├─ main.jsx
 └─ router.jsx
+
 ```
-<img width="225" height="791" alt="image" src="https://github.com/user-attachments/assets/627607e8-6156-49e5-9121-aa39e43141f4" />
+<img width="193" height="804" alt="image" src="https://github.com/user-attachments/assets/aa5485d3-e472-483b-b78b-4673f8de1f6e" />
+
 
 **폴더 구조 설명**
 
 * **컴포넌트/페이지 단위 폴더 관리**
 
   * `.jsx`와 `.css`를 한 폴더 안에 묶어 관리
-  * 사유: CSS 모듈 없이도 규모가 커져도 유지보수 편리
+  * 사유: 규모가 커져도 유지보수 편리
 
 * **data 폴더**
 
-  * 더미 데이터 JSON 형식
+  * 더미 데이터
   * 추후 API 연동 시 쉽게 교체 가능
 
 * **layout 폴더**
 
-  * Header, Footer, Outlet 등 전역 레이아웃 관리
+  * 디폴트 페이지로 Header, Footer, Outlet 등 전역 레이아웃 관리
 
 ---
 
@@ -159,14 +151,27 @@ src/
 
 ---
 
+좋아요! 😊 5️⃣ Insights 페이지 이후 내용만 **Markdown 형식**으로 다시 정리해 드릴게요. 바로 복붙 가능하게 만들었습니다.
+
+---
+
 ### 5️⃣ Insights 페이지 📊
 
-* 2025 글로벌 이상기후 데이터 기반 카드
-* 카드별 요약 + 참고 내용
-* 카드 데이터는 JSX 내 바로 정의
+* **OpenWeatherMap API 연동**
 
-**시연 이미지**
-<img width="1657" height="881" alt="image" src="https://github.com/user-attachments/assets/49d63247-c0a7-4801-b41d-509f3260f55d" />
+  * 12개 국가: 한국, 미국, 일본, 영국, 호주, 프랑스, 독일, 중국, 인도, 브라질, 캐나다, 남아공
+  * 카드별 온도, 습도, 날씨 상태 표시
+  * "자세히 보기" 버튼 → OpenWeatherMap 상세 페이지
+
+* **시연 사진**
+
+<img width="1906" height="981" alt="image" src="https://github.com/user-attachments/assets/59cbc10e-e0fe-4962-95dc-219e865c01eb" />
+
+* **주요 기능**
+
+  1. 국가별 실시간 기후 데이터 표시
+  2. 카드 클릭 시 OpenWeatherMap 상세 페이지로 이동
+  3. 로딩/에러 처리로 안정적 UX 제공
 
 
 ---
@@ -180,19 +185,46 @@ src/
 
 ## 💻 CSS 전략
 
-* 컴포넌트별 폴더 관리 (ex: `ClimateCard/ClimateCard.css`)
+* 컴포넌트별 폴더 관리 (ex: `InsightCard/InsightCard.css`)
 * 장점:
+
   1. 유지보수 용이
   2. CSS 격리
   3. 규모 커져도 관리 편리
+* 카드별 hover 효과, 그림자, 그라데이션 적용
 
 ---
 
 ## 🔎 검색 기능
 
-* **위치:** `주요 기후 이슈` 섹션 제목 아래
-* **기능:**
+* 위치: 주요 기후 이슈 섹션 제목 아래
+* 타이틀 기준 필터링
+* 입력값 없으면 모든 카드 표시
 
-  * 타이틀 기준 필터링
-  * 검색 버튼 클릭 시 필터 적용
-  * 입력값 없으면 모든 카드 표시
+---
+
+## ⚡ 추가 확장/보완 가능성
+
+### - 실시간 데이터 확장
+
+* 현재 Insights 페이지만 API 연동 → Regions 페이지나 ClimateCard에도 API 연동 가능
+* 예: 지역별 폭염지수, 강수량, 풍속, 기압 등 실시간 데이터 표시
+
+### - 상세 데이터 시각화
+
+* 카드 클릭 시 OpenWeatherMap 페이지 이동 대신 내부 모달/차트 표시 가능
+* 활용 라이브러리: Chart.js, Recharts, Leaflet.js
+
+### - 검색/필터 고도화
+
+* 국가/도시별 필터
+* 날씨 조건별 필터(폭염, 강수, 습도)
+
+### - 추가 API ?
+
+| API                              | 용도                          |
+| -------------------------------- | --------------------------- |
+| **WeatherAPI.com**               | 특정 지역 이상기후 알림, 기온 변동 통계     |
+| **Visual Crossing Weather**      | 과거 30년 이상기후 데이터, 단기 예보      |
+| **NASA Earthdata / GISS**        | CO₂ 농도, 지구 평균온도 등 장기 기후 데이터 |
+| **World Bank Climate Data**      | 국가별 연간 폭염 지수/강수량 통계         |
